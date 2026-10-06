@@ -1,0 +1,94 @@
+Loading SPX ESSVI surface...
+
+============================================================
+Calibrating Bass LV...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=3.47e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=30  final_max_change=9.91e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=20  final_max_change=6.95e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=21  final_max_change=7.03e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=26  final_max_change=8.71e-06
+  Total calibration time: 35.9s
+
+============================================================
+Calibrating Heston SKR...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=6.94e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=26  final_max_change=8.43e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=21  final_max_change=9.92e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=22  final_max_change=7.16e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=40  final_max_change=9.41e-06
+  Total calibration time: 40.0s
+
+============================================================
+Calibrating 3/2 SKR...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=6.94e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=27  final_max_change=9.01e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=21  final_max_change=8.83e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=22  final_max_change=9.60e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=31  final_max_change=9.63e-06
+  Total calibration time: 37.6s
+
+============================================================
+Calibrating Bergomi-1F SKR...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=5.20e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=28  final_max_change=7.24e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=23  final_max_change=8.61e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=23  final_max_change=8.76e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=41  final_max_change=9.33e-06
+  Total calibration time: 41.9s
+
+--- IV RMSE Summary (per maturity) ---
+                T=0.25y RMSE  T=0.5y RMSE  T=1.0y RMSE  T=2.0y RMSE  T=3.0y RMSE
+Model                                                                           
+Bass LV               0.0573       0.0065       0.0013       0.0044       0.0052
+Heston SKR            0.0573       0.0065       0.0013       0.0044       0.0052
+3/2 SKR               0.0573       0.0065       0.0013       0.0044       0.0052
+Bergomi-1F SKR        0.0573       0.0065       0.0013       0.0044       0.0052
+
+Saved results/exp1_smile_fit.csv
+Saved smile fit plot to results/exp1_smile_fits.png
+
+--- Martingale Property Check (|E[X_T] - 1| < 0.05) ---
+  Bass LV:
+    T=0.25: E[X_T]=0.99818  |dev|=0.00182  [OK]
+    T=0.50: E[X_T]=0.99813  |dev|=0.00187  [OK]
+    T=1.00: E[X_T]=0.99907  |dev|=0.00093  [OK]
+    T=2.00: E[X_T]=1.00436  |dev|=0.00436  [OK]
+    T=3.00: E[X_T]=1.01194  |dev|=0.01194  [OK]
+  Heston SKR:
+    T=0.25: E[X_T]=0.99818  |dev|=0.00182  [OK]
+    T=0.50: E[X_T]=0.99813  |dev|=0.00187  [OK]
+    T=1.00: E[X_T]=0.99907  |dev|=0.00093  [OK]
+    T=2.00: E[X_T]=1.00436  |dev|=0.00436  [OK]
+    T=3.00: E[X_T]=1.01194  |dev|=0.01194  [OK]
+  3/2 SKR:
+    T=0.25: E[X_T]=0.99818  |dev|=0.00182  [OK]
+    T=0.50: E[X_T]=0.99813  |dev|=0.00187  [OK]
+    T=1.00: E[X_T]=0.99907  |dev|=0.00093  [OK]
+    T=2.00: E[X_T]=1.00436  |dev|=0.00436  [OK]
+    T=3.00: E[X_T]=1.01194  |dev|=0.01194  [OK]
+  Bergomi-1F SKR:
+    T=0.25: E[X_T]=0.99818  |dev|=0.00182  [OK]
+    T=0.50: E[X_T]=0.99813  |dev|=0.00187  [OK]
+    T=1.00: E[X_T]=0.99907  |dev|=0.00093  [OK]
+    T=2.00: E[X_T]=1.00436  |dev|=0.00436  [OK]
+    T=3.00: E[X_T]=1.01194  |dev|=0.01194  [OK]

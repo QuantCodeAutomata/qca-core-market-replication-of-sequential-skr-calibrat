@@ -1,0 +1,102 @@
+Loading SPX ESSVI surface...
+
+Calibrating Bass LV...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=3.47e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=30  final_max_change=9.91e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=20  final_max_change=6.95e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=21  final_max_change=7.03e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=26  final_max_change=8.71e-06
+  Calibration done in 36.1s
+  RC=128.963 (±0.346), AC=106.983 (±0.542)
+
+Calibrating Heston SKR...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=6.94e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=26  final_max_change=8.43e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=21  final_max_change=9.92e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=22  final_max_change=7.16e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=40  final_max_change=9.41e-06
+  Calibration done in 40.0s
+  RC=127.826 (±0.370), AC=109.240 (±0.571)
+
+Calibrating 3/2 SKR...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=6.94e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=27  final_max_change=9.01e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=21  final_max_change=8.83e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=22  final_max_change=9.60e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=31  final_max_change=9.63e-06
+  Calibration done in 37.5s
+  RC=127.779 (±0.381), AC=108.778 (±0.553)
+
+Calibrating Bergomi-1F SKR...
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=5.20e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=28  final_max_change=7.24e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=23  final_max_change=8.61e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=23  final_max_change=8.76e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=41  final_max_change=9.33e-06
+  Calibration done in 41.9s
+  RC=128.161 (±0.373), AC=109.020 (±0.571)
+
+--- Structured Product Prices ---
+         Model  RC_price  RC_se  AC_price  AC_se
+       Bass LV   128.963  0.346   106.983  0.542
+    Heston SKR   127.826  0.370   109.240  0.571
+       3/2 SKR   127.779  0.381   108.778  0.553
+Bergomi-1F SKR   128.161  0.373   109.020  0.571
+
+--- Comparison to Paper Benchmarks ---
+Model                    RC Price   RC Paper   AC Price   AC Paper
+-----------------------------------------------------------------
+Bass LV                   128.963    113.987    106.983    104.899
+Heston SKR                127.826    122.000    109.240    106.834
+3/2 SKR                   127.779    116.991    108.778    106.444
+Bergomi-1F SKR            128.161    120.144    109.020    106.800
+
+Saved results/exp2_pricing.csv
+
+Running reverse cliquet sensitivity (L sweep)...
+
+Running autocallable sensitivity (b sweep)...
+Saved results/exp2_sensitivity_rc.csv and results/exp2_sensitivity_ac.csv
+Saved sensitivity curves to results/exp2_sensitivity.png
+
+--- RC Sensitivity Table ---
+       Bass LV  Heston SKR  3/2 SKR  Bergomi-1F SKR
+L                                                  
+0.020  112.225     114.261  113.210         114.736
+0.040  119.989     120.426  119.859         120.903
+0.060  125.737     125.074  124.880         125.492
+0.075  128.963     127.826  127.779         128.161
+0.090  131.474     130.096  130.112         130.329
+0.120  134.874     133.512  133.527         133.565
+0.150  136.897     135.837  135.790         135.783
+
+--- AC Sensitivity Table ---
+      Bass LV  Heston SKR  3/2 SKR  Bergomi-1F SKR
+b                                                 
+0.40  110.814     112.627  112.359         112.482
+0.50  109.186     111.318  110.833         111.057
+0.55  108.157     110.369  109.918         110.077
+0.60  106.983     109.240  108.778         109.020
+0.65  105.654     108.078  107.575         107.716
+0.70  104.119     106.623  106.050         106.253
+0.80  100.831     103.069  102.537         102.683

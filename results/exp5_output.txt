@@ -1,0 +1,32 @@
+/workspace/project/exp/exp5_synthetic_convergence.py:366: UserWarning: No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+  ax.legend(fontsize=9)
+Running SKR-to-SLV synthetic convergence study...
+Sigma_ref=0.2, SLV leverage: lambda(x)=1+0.3*tanh(-2*log(x))
+  Simulating SLV benchmark (fine grid)...
+  Simulating reference GBM (fine grid)...
+
+  Mesh size h=0.25000  (4 intervals, obs_dates=[0.25, 0.5, 0.75]...)
+    MSE at T: 0.001128  W1 at T: 0.000000  (10.6s)
+
+  Mesh size h=0.12500  (8 intervals, obs_dates=[0.125, 0.25, 0.375]...)
+    MSE at T: 0.001475  W1 at T: 0.000000  (35.4s)
+
+  Mesh size h=0.06250  (16 intervals, obs_dates=[0.0625, 0.125, 0.1875]...)
+    MSE at T: 0.001734  W1 at T: 0.000000  (81.1s)
+
+  Mesh size h=0.03125  (32 intervals, obs_dates=[0.03125, 0.0625, 0.09375]...)
+    MSE at T: 0.001904  W1 at T: 0.000000  (176.7s)
+
+--- Convergence Table ---
+       h  n_obs    mse_T  wasserstein_T       time
+0.250000      4 0.001128       0.000000  10.620266
+0.125000      8 0.001475       0.000000  35.365344
+0.062500     16 0.001734       0.000000  81.061596
+0.031250     32 0.001904       0.000000 176.684909
+
+Saved results/exp5_convergence.csv
+Saved convergence plot to results/exp5_convergence.png
+
+  Estimated convergence rate (MSE): O(h^-0.250)
+
+  Insufficient valid data to estimate W1 rate.

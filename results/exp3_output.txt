@@ -1,0 +1,89 @@
+Loading SPX ESSVI surface...
+
+============================================================
+  Benchmarking Bass LV...
+    Ref simulation: 0.03s
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=3.47e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=30  final_max_change=9.91e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=20  final_max_change=6.95e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=21  final_max_change=7.03e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=26  final_max_change=8.71e-06
+    Full calibration: 36.05s  (fixed-point: 36.02s)
+    Reverse cliquet: 0.0002s  price=128.963
+    Autocallable:    0.0009s  price=106.983
+
+============================================================
+  Benchmarking Heston SKR...
+    Ref simulation: 0.05s
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=6.94e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=26  final_max_change=8.43e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=21  final_max_change=9.92e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=22  final_max_change=7.16e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=40  final_max_change=9.41e-06
+    Full calibration: 40.03s  (fixed-point: 39.98s)
+    Reverse cliquet: 0.0002s  price=127.826
+    Autocallable:    0.0008s  price=109.240
+
+============================================================
+  Benchmarking 3/2 SKR...
+    Ref simulation: 0.06s
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=6.94e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=27  final_max_change=9.01e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=21  final_max_change=8.83e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=22  final_max_change=9.60e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=31  final_max_change=9.63e-06
+    Full calibration: 37.76s  (fixed-point: 37.70s)
+    Reverse cliquet: 0.0002s  price=127.779
+    Autocallable:    0.0008s  price=108.778
+
+============================================================
+  Benchmarking Bergomi-1F SKR...
+    Ref simulation: 0.06s
+  [SKR] Calibrating interval [0.00, 0.25]  …
+  [SKR]   done  n_iter=1  final_max_change=5.20e-18
+  [SKR] Calibrating interval [0.25, 0.50]  …
+  [SKR]   done  n_iter=28  final_max_change=7.24e-06
+  [SKR] Calibrating interval [0.50, 1.00]  …
+  [SKR]   done  n_iter=23  final_max_change=8.61e-06
+  [SKR] Calibrating interval [1.00, 2.00]  …
+  [SKR]   done  n_iter=23  final_max_change=8.76e-06
+  [SKR] Calibrating interval [2.00, 3.00]  …
+  [SKR]   done  n_iter=41  final_max_change=9.33e-06
+    Full calibration: 42.34s  (fixed-point: 42.28s)
+    Reverse cliquet: 0.0003s  price=128.161
+    Autocallable:    0.0008s  price=109.020
+
+--- Timing Table (seconds) ---
+                   Ref Sim (s)  Fixed Point (s)  Cliquet (s)  Autocall (s)  Total (s)
+Model                                                                                
+Bass LV                  0.034           36.019        0.000         0.001     36.054
+Heston SKR               0.053           39.978        0.000         0.001     40.032
+3/2 SKR                  0.059           37.704        0.000         0.001     37.764
+Bergomi-1F SKR           0.059           42.284        0.000         0.001     42.345
+Paper (reference)        1.825           15.000        0.100         0.200      0.000
+
+Saved results/exp3_timing.csv
+Saved timing breakdown plot to results/exp3_timing_breakdown.png
+
+--- Comparison with Paper Reference Timings ---
+Model                     Our Total    Paper Ref    Ratio
+---------------------------------------------------------
+Bass LV                       36.05        12.60     2.86x
+Heston SKR                    40.03        17.30     2.31x
+3/2 SKR                       37.76        17.30     2.18x
+Bergomi-1F SKR                42.34        21.30     1.99x
